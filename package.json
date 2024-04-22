@@ -1,6 +1,6 @@
 {
    "name": "mhb-wordcounter",
-   "version": "1.0.1",
+   "version": "1.0.3",
    "description": "",
    "main": "index.js",
    "type": "module",
@@ -17,6 +17,7 @@
    },
    "dependencies": {
       "chalk": "^5.3.0",
-      "inquirer": "^9.2.19"
+      "inquirer": "^9.2.19",
+      "mhb-wordcounter": "^1.0.3"
    }
 }
