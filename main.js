@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
 let runAgain = true;
@@ -6,6 +7,7 @@ while (runAgain) {
         name: 'option',
         type: 'list',
         choices: ['Count Words', 'Count Letters'],
+        message: "What do you want to do?",
     });
     if (choice.option === 'Count Words') {
         const userInput = await inquirer.prompt({
@@ -32,5 +34,9 @@ while (runAgain) {
         type: 'confirm',
         message: 'Would you like to count again?',
     });
-    runAgain = repeat.again;
+    if (repeat.again === false) {
+        runAgain = false;
+        console.log(chalk.blueBright(`${chalk.redBright("=".repeat(45))}\n"Thank you for using this application!"`));
+        console.log(chalk.green("This Program Created By: Muhammad Hamdan Bhatti"));
+    }
 }
